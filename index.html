@@ -1,47 +1,77 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="style.css">
-   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-   <title>Mi portfolio</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/uikit.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mi portfolio</title>
 </head>
 <body>
-   <div class="container">
-     <div class="bg-image">
-        <div class="overlay"></div>
-        <div class="card">
-            <img src="https://avatars.githubusercontent.com/u/81264902?v=4" alt="user-avatar" width="120" id="user-avatar">
-            <h1>Daniel Sandoval</h1>
-            <h3>Frontend Developer</h3>
-            <h3>▼</h3>
+    <div class="container uk-grid" uk-grid>
+        <div id="left-panel" class="uk-width-1-4@l uk-width-1-1@s uk-text-center">
+            <section id="avatar" class="uk-margin-top">
+                <img id="avatar-icon" class="uk-border-circle"
+                    src="https://avatars.githubusercontent.com/u/81264902?v=4" width="120" alt="Avatar icon">
+                <p id="title-mob">Daniel Sandoval</p>
+            </section>
+            <section id="info" class="uk-margin-top">
+                <ul class="uk-list uk-list-divider">
+                    <li>Daniel Sandoval</li>
+                    <li>Frontend Developer</li>
+                    <li><a href="https://github.com/danisandof">@danisandof</a></li>
+                </ul>
+                <ul uk-accordion>
+                    <li class="uk-open">
+                        <a class="uk-accordion-title uk-text-default" href="#">Lenguajes y Herramientas:</a>
+                        <div class="uk-accordion-content">
+                            <ul class="uk-list uk-list-divider">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Javascript</li>
+                                <li>Node.js</li>
+                                <li>PHP</li>
+                                <li>Wordpress</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </section>
         </div>
-     </div>
-     <div class="projects-view">
-      <div class="proj-info">
-         <h1>Mis proyectos</h1>
-         <div class="gallery">
-             <img src="https://github.com/danisandof/work-ui-blog-template/raw/main/screenshot-ui-blog.png" alt="proj1">
-             <img src="https://github.com/danisandof/work-ui-dashboard/raw/main/screenshot-ui-dashboard.png" alt="proj2">
-             <img src="https://github.com/danisandof/work-ui-landingpage/raw/main/screenshot-ui-landingpage.png" alt="proj3">
-             <img src="https://github.com/danisandof/work-ui-taskmandashboard/raw/main/screenshot-ui-taskmanager.png" alt="proj4">
-             <img src="https://github.com/danisandof/work-ui-emailapp/raw/main/screenshot-ui-emailapp.png" alt="proj5">
-             <img src="https://github.com/danisandof/work-ui-weatherapp/raw/main/screenshot-ui-weatherapp.png" alt="proj6">
-       </div>
-      </div>
-     </div>
-     <div class="tools-info-view">
-        <div class="info">
-            <h1>Herramientas que utilizo</h1>
-            <img src="images/tech-list.png" alt="tech-used-list" width="80%">
-            <img src="images/tech-logos.png" alt="tech-used-logos">
+        <div id="main" class="uk-width-3-4@l uk-width-1-1@s" style="background: #f1f1f1;">
+            <div id="image-cover" class="uk-height-small uk-background-cover uk-light"
+                data-src="images/image-background.jpg" uk-img></div>
+            <section id="info-mob" class="uk-margin-top">
+                <div class="uk-card uk-card-default uk-card-body">
+                    <p>Frontend Developer</p>
+                    <p><a href="https://github.com/danisandof">@danisandof</a></p>
+                    <ul uk-accordion>
+                        <li>
+                            <a class="uk-accordion-title uk-text-default" href="#">Lenguajes y Herramientas:</a>
+                            <div class="uk-accordion-content">
+                                <ul class="uk-list uk-list-divider">
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>Javascript</li>
+                                    <li>Node.js</li>
+                                    <li>PHP</li>
+                                    <li>Wordpress</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="repo-list" class="uk-margin-top">
+                <h3>Mis repositorios</h3>
+                <ul id="repos" class="uk-child-width-1-3@s uk-list" uk-grid></ul>
+            </section>
         </div>
-     </div>
-     <div class="footer">
-         <h3><a href="https://github.com/danisandof">@danisandof</a></h3>
-     </div>
-   </div>
+    </div>
+    <script type="text/javascript" src="js/githubquery.js"></script>
+    <script type="text/javascript" src="js/uikit-icons.min.js"></script>
+    <script type="text/javascript" src="js/uikit.min.js"></script>
 </body>
 </html>
